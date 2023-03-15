@@ -30,7 +30,7 @@ class listviewState extends State<listview> {
                 borderRadius: BorderRadius.circular(50)
               // color: Colors.black
             ),
-            child: ListView.separated(itemBuilder: (context,index)
+              child: ListView.separated(itemBuilder: (context,index)
             {
               return Card(
                 shape: RoundedRectangleBorder(

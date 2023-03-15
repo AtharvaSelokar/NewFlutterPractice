@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practise/Tile.dart';
 
 import 'Cards.dart';
 import 'GridView.dart';
+import 'Gridview_builder.dart';
 import 'Home.dart';
 import 'Listview.dart';
 import 'Login_screen.dart';
+import 'colors.dart';
 class MyDrawer extends StatelessWidget {
 
   const MyDrawer({Key? key}) : super(key: key);
@@ -68,6 +71,27 @@ class MyDrawer extends StatelessWidget {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const Cards(),));
                 },
 
+              ),
+              ListTile(
+                title: Text('GridViewBuilder',style: TextStyle(fontSize: 18),),
+                leading: Icon(Icons.grid_3x3),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=> GridviewBuilder(),));
+                },
+              ),
+              // ListTile(
+              //   title: Text('Color',style: TextStyle(fontSize: 18),),
+              //   leading: Icon(Icons.grid_3x3),
+              //   onTap: (){
+              //     Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Color1(),));
+              //   },
+              // ),
+              ListTile(
+                title: Text('Tile',style: TextStyle(fontSize: 18),),
+                leading: Icon(Icons.grid_3x3),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Tile(),));
+                },
               ),
             ],
           )

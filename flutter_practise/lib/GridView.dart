@@ -10,6 +10,7 @@ class Grid extends StatefulWidget {
 }
 
 class _GridState extends State<Grid> {
+  Color _ContainerColor = Colors.white;
   var arrCity=[Colors.blue,
     Colors.grey,
     Colors.greenAccent,
@@ -28,49 +29,79 @@ class _GridState extends State<Grid> {
     return Scaffold(
       appBar: AppBar(title: Text('GridView'),),
       drawer: MyDrawer(),
-      body:GridView.count(crossAxisCount: 2,children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[0]),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[1]),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[2]),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[3]),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[4]),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[5]),
+      body: GridView.count(crossAxisCount: 2,children: [
 
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[6]),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[7]),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[8]),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(color:arrCity[9]),
-        ),
-      ],) ,
+          InkWell(onTap: (){
+            setState(() {
+
+            });
+          },
+
+            // splashColor: Colors.red,
+            // hoverColor: Colors.red,
+
+
+            highlightColor: Colors.red,
+            child: Container(
+              child: Padding(
+
+                padding: const EdgeInsets.all(8.0),
+                child: Container(color:arrCity[0]),
+
+
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[1],
+            child: InkWell(
+              onTap: (){
+                setState(() {
+                });
+              },highlightColor: Colors.red,
+              splashColor: Colors.red,
+
+            ),),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[2]),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[3]),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[4]),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[5]),
+
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[6]),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[7]),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[8]),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(color:arrCity[9]),
+          ),
+        ],),
+
     );
   }
+}
+
+class _ContainerColor {
 }
