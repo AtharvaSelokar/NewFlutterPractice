@@ -7,6 +7,7 @@ import 'Gridview_builder.dart';
 import 'Home.dart';
 import 'Listview.dart';
 import 'Login_screen.dart';
+import 'NewLogin.dart';
 import 'colors.dart';
 class MyDrawer extends StatelessWidget {
 
@@ -91,6 +92,13 @@ class MyDrawer extends StatelessWidget {
                 leading: Icon(Icons.grid_3x3),
                 onTap: (){
                   Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Tile(),));
+                },
+              ),
+              ListTile(
+                title: Text('NewLoginPage',style: TextStyle(fontSize: 18),),
+                leading: Icon(Icons.grid_3x3),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=> New_login_page(),));
                 },
               ),
             ],
